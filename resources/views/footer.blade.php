@@ -17,7 +17,7 @@
 
         $.ajax({
             type: "POST",
-            url: 'http://127.0.0.1:8000/api/down-videos',
+            url: 'https://downinstaface.herokuapp.com/api/down-videos',
             data: postUrl,
             beforeSend : () => {
                 $('#img-down').css('display','none');
@@ -53,7 +53,7 @@
 
         $.ajax({
             type: "POST",
-            url: 'http://127.0.0.1:8000/api/down-images',
+            url: 'https://downinstaface.herokuapp.com/api/down-images',
             data: postUrl,
             beforeSend : () => {
                 $('#img-down').css('display','none');
