@@ -14,7 +14,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('finstaview');
+    return view('home_page');
 });
+
+Route::get('/facebook-donwload', function(){
+    $data = true;
+    return view('finstaview', compact('data', $data));
+});
+
+Route::get('/instagram-donwload', function(){
+    return view('finstaview' );
+});
+
+
+Route::get('/images-donwload', function(){
+    return view('donwload_image');
+});
+
+
+Route::get('/help', function(){
+    return view('help');
+});
+
+Route::get('/how-to-use', function(){
+    return view('how_to_use');
+});
+
 Route::get('finstavd/vd','VideoURL@FInstaVD');
 Route::get('finstavd/img','VideoURL@FInstaIMG');

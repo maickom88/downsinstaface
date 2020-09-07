@@ -1,17 +1,7 @@
 @extends('site')
 
-@if ($data ?? '')
-    @php
-    $tag = 'Facebook';
-    @endphp
-      @section('facebook', 'active ')
-@else
-    @php
-    $tag = 'Instagram';
-    @endphp
-    @section('insatgram', 'active ')
-    @endif
-
+@section('images', 'active')
+    
 
     @section('conteudo')
 
@@ -25,8 +15,8 @@
                 <div class="col-12 ">
                     <form action="">
 
-                        <input id="url" type="text" placeholder="Paste the URL of the {{$tag}} video">
-                        <a onclick="sendUrl()" class="waves-effect waves-light  center-align purple darken-1 btn-down-now">
+                        <input id="url" type="text" placeholder="Paste the url of the facebook/instagram image">
+                        <a onclick="sendUrlImages()" class="waves-effect waves-light  center-align purple darken-1 btn-down-now">
 
                             <div id="loader-url" style="display: none">
                                 <div class="preloader-wrapper small active ">
@@ -44,7 +34,7 @@
                                 </div>
                             </div>
                             <div id="img-donw" class="img-down center-align">
-                                <img  style="width: 70px; " src="src/img/Download_alt_font_awesome.svg.png" alt="">
+                                <img style="width: 70px;" src="src/img/Download_alt_font_awesome.svg.png" alt="">
                             </div>
 
                         </a>
